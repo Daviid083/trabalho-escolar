@@ -1,0 +1,378 @@
+
+/* CONFIGURAÇÕES GERAIS */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background-color: #F8FAFC;
+    color: #1E293B;
+}
+
+/* MENU LATERAL */
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 250px;
+    height: 100vh;
+
+    background-color: #FFFFFF;
+    border-right: 1px solid #E2E8F0;
+
+    padding: 30px 20px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.logo {
+    padding: 0 10px;
+    margin-bottom: 45px;
+}
+
+.logo h2 {
+    font-size: 25px;
+    font-weight: 700;
+    color: #1E293B;
+}
+
+.logo span {
+    color: #2563EB;
+}
+
+/* NAVEGAÇÃO */
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.menu-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    padding: 13px 15px;
+
+    text-decoration: none;
+    color: #64748B;
+
+    font-size: 14px;
+    font-weight: 500;
+
+    border-radius: 8px;
+    transition: 0.2s;
+}
+
+.menu-item i {
+    font-size: 21px;
+}
+
+.menu-item:hover {
+    background-color: #EFF6FF;
+    color: #2563EB;
+}
+
+.menu-item.active {
+    background-color: #EFF6FF;
+    color: #2563EB;
+    font-weight: 600;
+}
+
+/* PARTE INFERIOR DO MENU */
+
+.sidebar-bottom {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    margin-top: auto;
+}
+
+/* CONTEÚDO PRINCIPAL */
+
+.main-content {
+    margin-left: 250px;
+    padding: 35px 45px;
+    min-height: 100vh;
+}
+
+/* CABEÇALHO */
+
+.topbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-bottom: 40px;
+}
+
+.topbar h1 {
+    font-size: 25px;
+    font-weight: 700;
+    color: #1E293B;
+}
+
+.topbar p {
+    font-size: 14px;
+    color: #64748B;
+    margin-top: 6px;
+}
+
+/* PERFIL */
+
+.profile {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.profile i {
+    font-size: 30px;
+    color: #2563EB;
+}
+
+/* INTRODUÇÃO */
+
+.welcome {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background-color: #FFFFFF;
+
+    padding: 30px;
+
+    border: 1px solid #E2E8F0;
+    border-radius: 12px;
+
+    margin-bottom: 30px;
+}
+
+.welcome h2 {
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+
+.welcome p {
+    font-size: 14px;
+    color: #64748B;
+    line-height: 1.6;
+    max-width: 600px;
+}
+
+.welcome > i {
+    font-size: 40px;
+    color: #2563EB;
+}
+
+/* SEÇÃO DE RECOMENDAÇÕES */
+
+.recommendation-section {
+    background-color: #FFFFFF;
+
+    border: 1px solid #E2E8F0;
+    border-radius: 12px;
+
+    padding: 25px;
+    margin-bottom: 25px;
+}
+
+.section-header {
+    margin-bottom: 25px;
+}
+
+.section-header h2 {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+/* LISTA DE RECOMENDAÇÕES */
+
+.recommendation-list {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.recommendation-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 18px;
+
+    padding: 20px;
+
+    background-color: #F8FAFC;
+    border: 1px solid #E2E8F0;
+    border-radius: 10px;
+
+    transition: 0.2s;
+}
+
+.recommendation-card:hover {
+    border-color: #BFDBFE;
+}
+
+.recommendation-icon {
+    min-width: 45px;
+    height: 45px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: #EFF6FF;
+    border-radius: 10px;
+}
+
+.recommendation-icon i {
+    font-size: 24px;
+    color: #2563EB;
+}
+
+.recommendation-content h3 {
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.recommendation-content p {
+    font-size: 13px;
+    color: #64748B;
+    line-height: 1.6;
+
+    margin-bottom: 12px;
+}
+
+.category {
+    display: inline-block;
+
+    padding: 6px 10px;
+
+    background-color: #EFF6FF;
+    color: #2563EB;
+
+    border-radius: 20px;
+
+    font-size: 11px;
+    font-weight: 600;
+}
+
+/* DICA PARA O PROFESSOR */
+
+.teacher-tip {
+    display: flex;
+    align-items: flex-start;
+    gap: 18px;
+
+    background-color: #EFF6FF;
+
+    border: 1px solid #BFDBFE;
+    border-radius: 12px;
+
+    padding: 25px;
+}
+
+.tip-icon {
+    min-width: 40px;
+    height: 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: #FFFFFF;
+    border-radius: 10px;
+}
+
+.tip-icon i {
+    font-size: 23px;
+    color: #2563EB;
+}
+
+.teacher-tip h2 {
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+.teacher-tip p {
+    font-size: 13px;
+    color: #475569;
+    line-height: 1.6;
+}
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 1000px) {
+
+    .main-content {
+        padding: 30px 25px;
+    }
+
+}
+
+@media (max-width: 700px) {
+
+    .sidebar {
+        width: 75px;
+        padding: 25px 10px;
+    }
+
+    .logo {
+        text-align: center;
+        padding: 0;
+    }
+
+    .logo h2 {
+        font-size: 18px;
+    }
+
+    .menu-item {
+        justify-content: center;
+        padding: 13px 5px;
+    }
+
+    .menu-item span {
+        display: none;
+    }
+
+    .menu-item i {
+        font-size: 23px;
+    }
+
+    .main-content {
+        margin-left: 75px;
+        padding: 25px 15px;
+    }
+
+    .topbar h1 {
+        font-size: 20px;
+    }
+
+    .profile span {
+        display: none;
+    }
+
+    .welcome {
+        gap: 15px;
+    }
+
+    .recommendation-card {
+        gap: 12px;
+        padding: 15px;
+    }
+
+}

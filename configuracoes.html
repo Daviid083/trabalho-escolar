@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="configuracoes.css">
+
+    <title>Configurações | Educa+BR</title>
+</head>
+
+<body>
+
+    <!-- Menu lateral -->
+    <aside class="sidebar">
+        <div class="logo">
+            <h2>Educa<span>+BR</span></h2>
+        </div>
+
+        <nav class="menu">
+            <a href="dashboard.html" class="menu-item">
+                <i class='bx bx-home-alt'></i>
+                <span>Início</span>
+            </a>
+            <a href="registrar-aula.html" class="menu-item">
+                <i class='bx bx-book-add'></i>
+                <span>Registrar aula</span>
+            </a>
+            <a href="historico.html" class="menu-item">
+                <i class='bx bx-history'></i>
+                <span>Histórico de aulas</span>
+            </a>
+            <a href="analise-aprendizagem.html" class="menu-item">
+                <i class='bx bx-line-chart'></i>
+                <span>Análise de aprendizagem</span>
+            </a>
+            <a href="recomendacoes.html" class="menu-item">
+                <i class='bx bx-bulb'></i>
+                <span>Recomendações</span>
+            </a>
+        </nav>
+
+        <div class="sidebar-bottom">
+            <a href="meu-perfil.html" class="menu-item">
+                <i class='bx bx-user'></i>
+                <span>Meu perfil</span>
+            </a>
+            <a href="configuracoes.html" class="menu-item active">
+                <i class='bx bx-cog'></i>
+                <span>Configurações</span>
+            </a>
+        </div>
+    </aside>
+
+    <!-- Conteúdo principal -->
+    <main class="main-content">
+        <header class="topbar">
+            <div>
+                <h1>Configurações</h1>
+                <p>Gerencie suas preferências e configurações da conta.</p>
+            </div>
+            <div class="profile">
+                <i class='bx bx-user-circle'></i>
+                <span>Professor</span>
+            </div>
+        </header>
+
+        <!-- Configurações da conta -->
+        <section class="settings-section">
+            <div class="section-header">
+                <div class="section-title">
+                    <i class='bx bx-user'></i>
+                    <h2>Conta</h2>
+                </div>
+            </div>
+
+            <div class="setting-item">
+                <div>
+                    <h3>Informações pessoais</h3>
+                    <p>Gerencie seus dados pessoais e informações do perfil.</p>
+                </div>
+                <a href="meu-perfil.html" class="setting-link">
+                    Acessar perfil
+                    <i class='bx bx-chevron-right'></i>
+                </a>
+            </div>
+
+            <div class="setting-item">
+                <div>
+                    <h3>Segurança da conta</h3>
+                    <p>Gerencie sua senha e proteja seu acesso.</p>
+                </div>
+                <span class="setting-status">Em breve</span>
+            </div>
+        </section>
+
+        <!-- Preferências -->
+        <section class="settings-section">
+            <div class="section-header">
+                <div class="section-title">
+                    <i class='bx bx-palette'></i>
+                    <h2>Preferências</h2>
+                </div>
+            </div>
+
+            <div class="setting-item">
+                <div>
+                    <h3>Aparência</h3>
+                    <p>Escolha como deseja visualizar a plataforma.</p>
+                </div>
+                <select class="setting-select" id="aparencia">
+                    <option value="claro">Modo claro</option>
+                    <option value="escuro">Modo escuro</option>
+                </select>
+            </div>
+
+            <div class="setting-item">
+                <div>
+                    <h3>Idioma</h3>
+                    <p>Defina o idioma utilizado na plataforma.</p>
+                </div>
+                <select class="setting-select" id="idioma">
+                    <option value="pt-br">Português (Brasil)</option>
+                </select>
+            </div>
+        </section>
+
+        <!-- Notificações -->
+        <section class="settings-section">
+            <div class="section-header">
+                <div class="section-title">
+                    <i class='bx bx-bell'></i>
+                    <h2>Notificações</h2>
+                </div>
+            </div>
+
+            <div class="setting-item">
+                <div>
+                    <h3>Notificações da plataforma</h3>
+                    <p>Receber avisos e atualizações do Educa+BR.</p>
+                </div>
+                <label class="switch">
+                    <input type="checkbox" id="notificacoes-plataforma" checked>
+                    <span class="slider"></span>
+                </label>
+            </div>
+
+            <div class="setting-item">
+                <div>
+                    <h3>Lembretes de atividades</h3>
+                    <p>Receber lembretes sobre atividades e registros.</p>
+                </div>
+                <label class="switch">
+                    <input type="checkbox" id="lembretes-atividades" checked>
+                    <span class="slider"></span>
+                </label>
+            </div>
+        </section>
+
+        <!-- Sobre a plataforma -->
+        <section class="settings-section">
+            <div class="section-header">
+                <div class="section-title">
+                    <i class='bx bx-info-circle'></i>
+                    <h2>Sobre a plataforma</h2>
+                </div>
+            </div>
+
+            <div class="setting-item">
+                <div>
+                    <h3>Educa+BR</h3>
+                    <p>Plataforma de acompanhamento pedagógico.</p>
+                </div>
+                <span class="setting-status">Versão 1.0</span>
+            </div>
+        </section>
+    </main>
+
+    <script src="configuracoes.js"></script>
+</body>
+</html>

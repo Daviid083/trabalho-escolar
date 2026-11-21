@@ -1,0 +1,355 @@
+/* CONFIGURAÇÕES GERAIS */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background-color: #F8FAFC;
+    color: #1E293B;
+}
+
+/* MENU LATERAL */
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 100vh;
+    background-color: #FFFFFF;
+    border-right: 1px solid #E2E8F0;
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.logo {
+    padding: 0 10px;
+    margin-bottom: 45px;
+}
+
+.logo h2 {
+    font-size: 25px;
+    font-weight: 700;
+    color: #1E293B;
+}
+
+.logo span { color: #2563EB; }
+
+/* NAVEGAÇÃO */
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.menu-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 13px 15px;
+    text-decoration: none;
+    color: #64748B;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 8px;
+    transition: 0.2s;
+}
+
+.menu-item i { font-size: 21px; }
+
+.menu-item:hover,
+.menu-item.active {
+    background-color: #EFF6FF;
+    color: #2563EB;
+}
+
+.menu-item.active { font-weight: 600; }
+
+/* PARTE INFERIOR DO MENU */
+
+.sidebar-bottom {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: auto;
+}
+
+/* CONTEÚDO PRINCIPAL */
+
+.main-content {
+    margin-left: 250px;
+    padding: 35px 45px;
+    min-height: 100vh;
+}
+
+/* CABEÇALHO */
+
+.topbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+.topbar h1 {
+    font-size: 25px;
+    font-weight: 700;
+    color: #1E293B;
+}
+
+.topbar p {
+    font-size: 14px;
+    color: #64748B;
+    margin-top: 6px;
+}
+
+/* PERFIL */
+
+.profile {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.profile i {
+    font-size: 30px;
+    color: #2563EB;
+}
+
+/* SEÇÕES DE CONFIGURAÇÕES */
+
+.settings-section {
+    background-color: #FFFFFF;
+    border: 1px solid #E2E8F0;
+    border-radius: 12px;
+    padding: 25px;
+    margin-bottom: 25px;
+}
+
+/* TÍTULOS DAS SEÇÕES */
+
+.section-header { margin-bottom: 20px; }
+
+.section-title {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.section-title i {
+    font-size: 23px;
+    color: #2563EB;
+}
+
+.section-title h2 {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+/* ITENS DE CONFIGURAÇÃO */
+
+.setting-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 20px 0;
+    border-top: 1px solid #E2E8F0;
+}
+
+.setting-item h3 {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+
+.setting-item p {
+    font-size: 13px;
+    color: #64748B;
+    line-height: 1.5;
+}
+
+/* LINK DE ACESSO */
+
+.setting-link {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    text-decoration: none;
+    color: #2563EB;
+    font-size: 13px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.setting-link:hover { color: #1D4ED8; }
+.setting-link i { font-size: 18px; }
+
+/* STATUS */
+
+.setting-status {
+    font-size: 12px;
+    font-weight: 500;
+    color: #64748B;
+    background-color: #F1F5F9;
+    padding: 7px 12px;
+    border-radius: 20px;
+    white-space: nowrap;
+}
+
+/* SELECT */
+
+.setting-select {
+    background-color: #FFFFFF;
+    border: 1px solid #CBD5E1;
+    border-radius: 8px;
+    padding: 9px 12px;
+    font-size: 13px;
+    color: #1E293B;
+    outline: none;
+    cursor: pointer;
+}
+
+.setting-select:focus { border-color: #2563EB; }
+
+/* INTERRUPTORES */
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 45px;
+    height: 24px;
+    flex-shrink: 0;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #CBD5E1;
+    border-radius: 30px;
+    transition: 0.3s;
+}
+
+.slider::before {
+    position: absolute;
+    content: "";
+    width: 18px;
+    height: 18px;
+    left: 3px;
+    bottom: 3px;
+    background-color: #FFFFFF;
+    border-radius: 50%;
+    transition: 0.3s;
+}
+
+.switch input:checked + .slider { background-color: #2563EB; }
+.switch input:checked + .slider::before { transform: translateX(21px); }
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 1000px) {
+    .main-content { padding: 30px 25px; }
+}
+
+@media (max-width: 700px) {
+    .sidebar {
+        width: 75px;
+        padding: 25px 10px;
+    }
+
+    .logo {
+        text-align: center;
+        padding: 0;
+    }
+
+    .logo h2 { font-size: 18px; }
+
+    .menu-item {
+        justify-content: center;
+        padding: 13px 5px;
+    }
+
+    .menu-item span { display: none; }
+    .menu-item i { font-size: 23px; }
+
+    .main-content {
+        margin-left: 75px;
+        padding: 25px 15px;
+    }
+
+    .topbar h1 { font-size: 20px; }
+    .profile span { display: none; }
+
+    .setting-item {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 12px;
+    }
+}
+
+/* MODO ESCURO */
+
+body.modo-escuro {
+    background-color: #0F172A;
+    color: #E2E8F0;
+}
+
+body.modo-escuro .sidebar,
+body.modo-escuro .settings-section {
+    background-color: #1E293B;
+    border-color: #334155;
+}
+
+body.modo-escuro .logo h2,
+body.modo-escuro .topbar h1,
+body.modo-escuro .section-title h2,
+body.modo-escuro .setting-item h3 {
+    color: #F8FAFC;
+}
+
+body.modo-escuro .menu-item { color: #CBD5E1; }
+
+body.modo-escuro .menu-item:hover,
+body.modo-escuro .menu-item.active {
+    background-color: #263B59;
+    color: #93C5FD;
+}
+
+body.modo-escuro .topbar p,
+body.modo-escuro .setting-item p,
+body.modo-escuro .profile span {
+    color: #CBD5E1;
+}
+
+body.modo-escuro .setting-item { border-color: #334155; }
+
+body.modo-escuro .setting-select {
+    background-color: #0F172A;
+    border-color: #475569;
+    color: #F8FAFC;
+}
+
+body.modo-escuro .setting-status {
+    background-color: #334155;
+    color: #E2E8F0;
+}

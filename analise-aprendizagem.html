@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="analise-aprendizagem.css">
+
+    <title>Análise de aprendizagem | Educa+BR</title>
+</head>
+<body>
+
+    <!-- Menu lateral -->
+    <aside class="sidebar">
+        <div class="logo">
+            <h2>Educa<span>+BR</span></h2>
+        </div>
+
+        <nav class="menu">
+            <a href="dashboard.html" class="menu-item">
+                <i class='bx bx-home-alt'></i>
+                <span>Início</span>
+            </a>
+
+            <a href="registrar-aula.html" class="menu-item">
+                <i class='bx bx-book-add'></i>
+                <span>Registrar aula</span>
+            </a>
+
+            <a href="historico.html" class="menu-item">
+                <i class='bx bx-history'></i>
+                <span>Histórico de aulas</span>
+            </a>
+
+            <a href="analise-aprendizagem.html" class="menu-item active">
+                <i class='bx bx-line-chart'></i>
+                <span>Análise de aprendizagem</span>
+            </a>
+
+            <a href="recomendacoes.html" class="menu-item">
+                <i class='bx bx-bulb'></i>
+                <span>Recomendações</span>
+            </a>
+        </nav>
+
+        <div class="sidebar-bottom">
+            <a href="meu-perfil.html" class="menu-item">
+                <i class='bx bx-user'></i>
+                <span>Meu perfil</span>
+            </a>
+
+            <a href="configuracoes.html" class="menu-item">
+                <i class='bx bx-cog'></i>
+                <span>Configurações</span>
+            </a>
+        </div>
+    </aside>
+
+    <!-- Conteúdo principal -->
+    <main class="main-content">
+        <header class="topbar">
+            <div>
+                <h1>Análise de aprendizagem</h1>
+                <p>Acompanhe os registros das suas aulas e turmas.</p>
+            </div>
+
+            <div class="profile">
+                <i class='bx bx-user-circle'></i>
+                <span>Professor</span>
+            </div>
+        </header>
+
+        <!-- Indicadores calculados com base nas aulas registradas -->
+        <section class="analysis-cards">
+            <div class="card">
+                <i class='bx bx-book-open'></i>
+                <h3>Aulas registradas</h3>
+                <p id="total-aulas">0</p>
+            </div>
+
+            <div class="card">
+                <i class='bx bx-book-content'></i>
+                <h3>Disciplinas trabalhadas</h3>
+                <p id="total-disciplinas">0</p>
+            </div>
+
+            <div class="card">
+                <i class='bx bx-group'></i>
+                <h3>Turmas atendidas</h3>
+                <p id="total-turmas">0</p>
+            </div>
+        </section>
+
+        <!-- Quantidade de aulas por disciplina -->
+        <section class="analysis-section">
+            <div class="section-header">
+                <h2>Aulas por disciplina</h2>
+            </div>
+            <div id="disciplinas-lista" class="data-list"></div>
+            <div id="disciplinas-vazio" class="empty-state">
+                <i class='bx bx-bar-chart-alt-2'></i>
+                <h3>Nenhum registro disponível</h3>
+                <p>Quando você registrar aulas, a quantidade por disciplina aparecerá aqui.</p>
+            </div>
+        </section>
+
+        <!-- Turmas registradas -->
+        <section class="analysis-section">
+            <div class="section-header">
+                <h2>Turmas atendidas</h2>
+            </div>
+            <div id="turmas-lista" class="tag-list"></div>
+            <div id="turmas-vazio" class="empty-state">
+                <i class='bx bx-group'></i>
+                <h3>Nenhuma turma registrada</h3>
+                <p>As turmas informadas nos registros das aulas aparecerão aqui.</p>
+            </div>
+        </section>
+
+        <!-- Conteúdos trabalhados -->
+        <section class="analysis-section">
+            <div class="section-header">
+                <h2>Conteúdos trabalhados recentemente</h2>
+            </div>
+            <div id="conteudos-lista" class="content-list"></div>
+            <div id="conteudos-vazio" class="empty-state">
+                <i class='bx bx-notepad'></i>
+                <h3>Nenhum conteúdo registrado</h3>
+                <p>Os conteúdos informados ao registrar as aulas aparecerão nesta área.</p>
+            </div>
+        </section>
+
+        <p class="analysis-note">
+            Esta análise utiliza somente as informações cadastradas nas aulas.
+            Ela não representa notas ou desempenho dos alunos.
+        </p>
+    </main>
+
+    <script src="analise-aprendizagem.js"></script>
+</body>
+</html>

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="registrar-aula.css">
+
+    <title>Registrar aula | Educa+BR</title>
+</head>
+<body>
+
+<!-- Menu Lateral -->
+<aside class="sidebar">
+
+    <div class="logo">
+        <h2>Educa<span>+BR</span></h2>
+    </div>
+
+    <nav class="menu">
+
+        <a href="dashboard.html" class="menu-item">
+            <i class='bx bx-home-alt'></i>
+            <span>Início</span>
+        </a>
+
+        <a href="registrar-aula.html" class="menu-item active">
+            <i class='bx bx-book-add'></i>
+            <span>Registrar aula</span>
+        </a>
+
+        <a href="historico.html" class="menu-item">
+            <i class='bx bx-history'></i>
+            <span>Histórico de aulas</span>
+        </a>
+
+        <a href="analise-aprendizagem.html" class="menu-item">
+            <i class='bx bx-line-chart'></i>
+            <span>Análise de aprendizagem</span>
+        </a>
+
+        <a href="recomendacoes.html" class="menu-item">
+            <i class='bx bx-bulb'></i>
+            <span>Recomendações</span>
+        </a>
+
+    </nav>
+
+    <div class="sidebar-bottom">
+
+        <a href="meu-perfil.html" class="menu-item">
+            <i class='bx bx-user'></i>
+            <span>Meu perfil</span>
+        </a>
+
+        <a href="configuracoes.html" class="menu-item">
+            <i class='bx bx-cog'></i>
+            <span>Configurações</span>
+        </a>
+
+    </div>
+
+</aside>
+
+
+<!-- Conteúdo principal -->
+<main class="main-content">
+
+    <!-- Cabeçalho -->
+    <header class="topbar">
+
+        <div>
+            <h1>Registrar aula</h1>
+            <p>Preencha as informações para registrar uma nova aula.</p>
+        </div>
+
+        <div class="profile">
+            <i class='bx bx-user-circle'></i>
+            <span>Professor</span>
+        </div>
+
+    </header>
+
+    <!-- Formulário -->
+    <section class="form-container">
+
+        <div class="form-header">
+            <h2>Informações da aula</h2>
+            <p>Informe os dados da aula ministrada.</p>
+        </div>
+
+        <form id="form-aula">
+
+            <div class="form-group">
+                <label for="disciplina">Disciplina</label>
+
+                <input
+                    type="text"
+                    id="disciplina"
+                    placeholder="Ex: Matemática"
+                    required
+                >
+            </div>
+
+            <div class="form-row">
+
+                <div class="form-group">
+                    <label for="turma">Turma</label>
+
+                    <input
+                        type="text"
+                        id="turma"
+                        placeholder="Ex: 2º ano A"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="data">Data da aula</label>
+
+                    <input
+                        type="date"
+                        id="data"
+                        required
+                    >
+                </div>
+
+            </div>
+
+            <div class="form-group">
+                <label for="conteudo">Conteúdo trabalhado</label>
+
+                <input
+                    type="text"
+                    id="conteudo"
+                    placeholder="Digite o conteúdo da aula"
+                    required
+                >
+            </div>
+
+            <div class="form-group">
+                <label for="descricao">Descrição da aula</label>
+
+                <textarea
+                    id="descricao"
+                    rows="5"
+                    placeholder="Descreva como foi realizada a aula..."
+                    required
+                ></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="observacoes">Observações</label>
+
+                <textarea
+                    id="observacoes"
+                    rows="4"
+                    placeholder="Registre dificuldades, participação dos alunos ou outras observações..."
+                ></textarea>
+            </div>
+
+            <div class="form-buttons">
+
+                <button type="reset" class="btn-clear">
+                    Limpar
+                </button>
+
+                <button type="submit" class="btn-save">
+                    <i class='bx bx-save'></i>
+                    Registrar aula
+                </button>
+
+            </div>
+
+        </form>
+
+    </section>
+
+</main>
+
+<script src="registrar-aula.js"></script>
+</body>
+</html>

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="meu-perfil.css">
+
+    <title>Meu perfil | Educa+BR</title>
+</head>
+
+<body>
+
+    <!-- Menu lateral -->
+    <aside class="sidebar">
+        <div class="logo">
+            <h2>Educa<span>+BR</span></h2>
+        </div>
+
+        <nav class="menu">
+            <a href="dashboard.html" class="menu-item">
+                <i class='bx bx-home-alt'></i>
+                <span>Início</span>
+            </a>
+
+            <a href="registrar-aula.html" class="menu-item">
+                <i class='bx bx-book-add'></i>
+                <span>Registrar aula</span>
+            </a>
+
+            <a href="historico.html" class="menu-item">
+                <i class='bx bx-history'></i>
+                <span>Histórico de aulas</span>
+            </a>
+
+            <a href="analise-aprendizagem.html" class="menu-item">
+                <i class='bx bx-line-chart'></i>
+                <span>Análise de aprendizagem</span>
+            </a>
+
+            <a href="recomendacoes.html" class="menu-item">
+                <i class='bx bx-bulb'></i>
+                <span>Recomendações</span>
+            </a>
+        </nav>
+
+        <div class="sidebar-bottom">
+            <a href="meu-perfil.html" class="menu-item active">
+                <i class='bx bx-user'></i>
+                <span>Meu perfil</span>
+            </a>
+
+            <a href="configuracoes.html" class="menu-item">
+                <i class='bx bx-cog'></i>
+                <span>Configurações</span>
+            </a>
+        </div>
+    </aside>
+
+    <!-- Conteúdo principal -->
+    <main class="main-content">
+
+        <header class="topbar">
+            <div>
+                <h1>Meu perfil</h1>
+                <p>Visualize e gerencie suas informações pessoais.</p>
+            </div>
+
+            <div class="profile">
+                <i class='bx bx-user-circle'></i>
+                <span id="nome-cabecalho">Professor</span>
+            </div>
+        </header>
+
+        <!-- Cartão do perfil -->
+        <section class="profile-card">
+            <div class="profile-photo">
+                <i class='bx bx-user'></i>
+            </div>
+
+            <div class="profile-info">
+                <h2 id="nome-perfil">Nome do professor</h2>
+                <p>Professor(a)</p>
+            </div>
+        </section>
+
+        <!-- Informações pessoais -->
+        <section class="info-section">
+            <div class="section-header">
+                <h2>Informações pessoais</h2>
+
+                <button class="edit-button" id="botao-editar" type="button">
+                    <i class='bx bx-edit'></i>
+                    Editar perfil
+                </button>
+            </div>
+
+            <div class="info-grid">
+                <div class="info-item">
+                    <label>Nome completo</label>
+                    <p id="info-nome">Não informado</p>
+                </div>
+
+                <div class="info-item">
+                    <label>E-mail</label>
+                    <p id="info-email">Não informado</p>
+                </div>
+
+                <div class="info-item">
+                    <label>Disciplina</label>
+                    <p id="info-disciplina">Não informada</p>
+                </div>
+
+                <div class="info-item">
+                    <label>Escola</label>
+                    <p id="info-escola">Não informada</p>
+                </div>
+            </div>
+
+            <!-- Formulário que aparece ao clicar em Editar perfil -->
+            <form id="form-perfil" class="form-perfil" hidden>
+                <div class="campo-formulario">
+                    <label for="nome">Nome completo</label>
+                    <input type="text" id="nome" placeholder="Digite seu nome" required>
+                </div>
+
+                <div class="campo-formulario">
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" placeholder="Digite seu e-mail" required>
+                </div>
+
+                <div class="campo-formulario">
+                    <label for="disciplina">Disciplina</label>
+                    <input type="text" id="disciplina" placeholder="Ex.: Matemática">
+                </div>
+
+                <div class="campo-formulario">
+                    <label for="escola">Escola</label>
+                    <input type="text" id="escola" placeholder="Digite o nome da escola">
+                </div>
+
+                <div class="form-botoes">
+                    <button type="submit" class="botao-salvar">Salvar alterações</button>
+                    <button type="button" id="botao-cancelar" class="botao-cancelar">Cancelar</button>
+                </div>
+            </form>
+        </section>
+
+        <!-- Informações da conta -->
+        <section class="info-section">
+            <div class="section-header">
+                <h2>Informações da conta</h2>
+            </div>
+
+            <div class="info-grid">
+                <div class="info-item">
+                    <label>Tipo de conta</label>
+                    <p>Professor</p>
+                </div>
+
+                <div class="info-item">
+                    <label>Plataforma</label>
+                    <p>Educa+BR</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="meu-perfil.js"></script>
+</body>
+</html>

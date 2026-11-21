@@ -1,0 +1,50 @@
+EDUCA+BR — INFORMAÇÕES PARA INTEGRAÇÃO COM O BACKEND
+
+ESTADO ATUAL
+O frontend funciona como demonstração local e ainda utiliza localStorage/sessionStorage.
+Os arquivos abaixo precisarão passar a conversar com a API quando o backend estiver definido:
+- cadastro.js: cadastro de contas
+- script.js: login
+- registrar-aula.js: criação de registros de aula
+- historico.js: listagem e exclusão de aulas
+- analise-aprendizagem.js: indicadores calculados a partir dos registros
+- dashboard.js: indicadores e atividades recentes
+- meu-perfil.js: consulta e atualização do perfil
+- configuracoes.js: preferências locais do navegador
+
+ESTRUTURA DE DADOS QUE O FRONTEND USA HOJE
+Conta:
+{
+  "usuario": "nome de usuário",
+  "senha": "senha (somente na demonstração local)",
+  "email": "email",
+  "nomeCompleto": "nome completo (opcional)",
+  "disciplina": "disciplina (opcional)",
+  "escola": "escola (opcional)"
+}
+
+Aula:
+{
+  "disciplina": "Matemática",
+  "turma": "2º ano A",
+  "data": "AAAA-MM-DD",
+  "conteudo": "Conteúdo trabalhado",
+  "descricao": "Descrição da aula",
+  "observacoes": "Observações (opcional)"
+}
+
+PREFERÊNCIAS LOCAIS ATUAIS
+- aparencia: "claro" ou "escuro"
+- notificacoesPlataforma: booleano armazenado como texto
+- lembretesAtividades: booleano armazenado como texto
+
+O QUE PRECISA SER COMBINADO COM O BACKEND
+Antes de substituir o armazenamento local por chamadas fetch, o frontend precisa receber do responsável pelo backend:
+1. Endereço base da API e rotas disponíveis.
+2. Formato exato dos dados enviados e recebidos por cada rota.
+3. Como será feita a autenticação e como o frontend enviará a sessão/token.
+4. Como cada aula será vinculada ao professor autenticado.
+5. Como serão tratados erros, validações e respostas do servidor.
+
+IMPORTANTE
+Não foram inventados endpoints neste arquivo. A senha salva em localStorage no protótipo é apenas uma solução temporária de demonstração; na versão integrada, a autenticação e o armazenamento seguro de senhas devem ficar no backend. O backend também deve validar permissões e impedir que um professor acesse ou altere registros de outro professor.

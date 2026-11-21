@@ -1,0 +1,307 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+/* CONFIGURAÇÕES GERAIS */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background-color: #F8FAFC;
+    color: #1E293B;
+}
+
+/* MENU LATERAL */
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 100vh;
+    background-color: #FFFFFF;
+    border-right: 1px solid #E2E8F0;
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.logo {
+    padding: 0 10px;
+    margin-bottom: 45px;
+}
+
+.logo h2 {
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.logo span {
+    color: #2563EB;
+}
+
+/* NAVEGAÇÃO */
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.menu-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 13px 15px;
+    text-decoration: none;
+    color: #64748B;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 8px;
+    transition: 0.2s;
+}
+
+.menu-item i {
+    font-size: 21px;
+}
+
+.menu-item:hover,
+.menu-item.active {
+    background-color: #EFF6FF;
+    color: #2563EB;
+}
+
+.menu-item.active {
+    font-weight: 600;
+}
+
+/* PARTE INFERIOR DO MENU */
+
+.sidebar-bottom {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: auto;
+}
+
+/* CONTEÚDO PRINCIPAL */
+
+.main-content {
+    margin-left: 250px;
+    padding: 35px 45px;
+    min-height: 100vh;
+}
+
+/* CABEÇALHO */
+
+.topbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 35px;
+}
+
+.topbar h1 {
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.topbar p {
+    font-size: 14px;
+    color: #64748B;
+    margin-top: 6px;
+}
+
+/* PERFIL */
+
+.profile {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.profile i {
+    font-size: 30px;
+    color: #2563EB;
+}
+
+/* FORMULÁRIO */
+
+.form-container {
+    background-color: #FFFFFF;
+    border: 1px solid #E2E8F0;
+    border-radius: 12px;
+    padding: 30px;
+}
+
+.form-header {
+    margin-bottom: 25px;
+}
+
+.form-header h2 {
+    font-size: 18px;
+    margin-bottom: 7px;
+}
+
+.form-header p {
+    font-size: 13px;
+    color: #64748B;
+}
+
+/* CAMPOS */
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #334155;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid #CBD5E1;
+    border-radius: 8px;
+    font-size: 14px;
+    color: #1E293B;
+    outline: none;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #2563EB;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+/* CAMPOS LADO A LADO */
+
+.form-row {
+    display: flex;
+    gap: 20px;
+}
+
+.form-row .form-group {
+    flex: 1;
+}
+
+/* BOTÕES */
+
+.form-buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+    margin-top: 25px;
+}
+
+.form-buttons button {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.btn-clear {
+    background-color: #F1F5F9;
+    color: #475569;
+}
+
+.btn-save {
+    background-color: #2563EB;
+    color: #FFFFFF;
+}
+
+.btn-clear:hover {
+    background-color: #E2E8F0;
+}
+
+.btn-save:hover {
+    background-color: #1D4ED8;
+}
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 1000px) {
+    .main-content {
+        padding: 30px 25px;
+    }
+}
+
+@media (max-width: 700px) {
+    .sidebar {
+        width: 75px;
+        padding: 25px 10px;
+    }
+
+    .logo {
+        text-align: center;
+        padding: 0;
+    }
+
+    .logo h2 {
+        font-size: 18px;
+    }
+
+    .menu-item {
+        justify-content: center;
+        padding: 13px 5px;
+    }
+
+    .menu-item span {
+        display: none;
+    }
+
+    .menu-item i {
+        font-size: 23px;
+    }
+
+    .main-content {
+        margin-left: 75px;
+        padding: 25px 15px;
+    }
+
+    .topbar h1 {
+        font-size: 20px;
+    }
+
+    .profile span {
+        display: none;
+    }
+
+    .form-container {
+        padding: 20px;
+    }
+
+    .form-row {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .form-buttons {
+        flex-direction: column;
+    }
+
+    .form-buttons button {
+        justify-content: center;
+    }
+}
